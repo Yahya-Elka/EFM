@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaLux Auto — Luxury Mobile Car Wash</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============================================================
+       LOADER
+  ============================================================ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <svg class="loader-logo-svg" viewBox="0 0 120 40" fill="none">
+        <text x="0" y="30" font-family="Playfair Display" font-size="28" font-weight="700" fill="#C9A84C">A</text>
+        <text x="18" y="30" font-family="Playfair Display" font-size="28" font-weight="400" fill="#ffffff">qua</text>
+        <text x="62" y="30" font-family="Playfair Display" font-size="28" font-weight="700" fill="#C9A84C">L</text>
+        <text x="75" y="30" font-family="Playfair Display" font-size="28" font-weight="400" fill="#ffffff">ux</text>
+      </svg>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-a">A</span>qua<span class="brand-l">L</span>ux <span class="brand-sub">AUTO</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#problem" data-nav>Problem</a></li>
+        <li><a href="#solution" data-nav>Solution</a></li>
+        <li><a href="#services" data-nav>Services</a></li>
+        <li><a href="#how-it-works" data-nav>Process</a></li>
+        <li><a href="#market" data-nav>Market</a></li>
+        <li><a href="#model" data-nav>Business</a></li>
+        <li><a href="#advantages" data-nav>Edge</a></li>
+        <li><a href="#vision" data-nav>Vision</a></li>
+        <li><a href="#contact" class="nav-cta" data-nav>Book Now</a></li>
+      </ul>
+
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <nav class="mobile-menu">
+      <a href="#problem" class="mobile-link">Problem</a>
+      <a href="#solution" class="mobile-link">Solution</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#how-it-works" class="mobile-link">Process</a>
+      <a href="#market" class="mobile-link">Market</a>
+      <a href="#model" class="mobile-link">Business</a>
+      <a href="#advantages" class="mobile-link">Edge</a>
+      <a href="#vision" class="mobile-link">Vision</a>
+      <a href="#contact" class="mobile-link cta">Book Now</a>
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section id="home" class="hero-section">
+    <!-- Parallax background layers -->
+    <div class="hero-parallax" id="heroBg">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85" alt="Luxury car wash" class="hero-bg-img" />
+    </div>
+    <div class="hero-vignette"></div>
+    <div class="hero-grain"></div>
+
+    <!-- Animated water droplets -->
+    <div class="drops-container" id="dropsContainer"></div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up" style="--d:0.2s">
+        <span class="eyebrow-line"></span>
+        <span>Morocco's Premier Mobile Detailing Service</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-title reveal-up" style="--d:0.4s">
+        <span class="title-line">Luxury</span>
+        <span class="title-line italic">Car Care,</span>
+        <span class="title-line">Delivered.</span>
+      </h1>
+
+      <p class="hero-subtitle reveal-up" style="--d:0.65s">
+        Premium mobile car wash & detailing — we come to your home,<br class="d-none d-md-block">
+        office, or anywhere you need us. No queues. No compromise.
+      </p>
+
+      <div class="hero-actions reveal-up" style="--d:0.85s">
+        <a href="#contact" class="btn-gold">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book Your Wash</span>
+          <i class="fas fa-arrow-right btn-arrow"></i>
+        </a>
+        <a href="#solution" class="btn-ghost">
+          <i class="fas fa-play-circle"></i>
+          <span>Discover More</span>
+        </a>
+      </div>
+
+      <!-- Floating stats cards -->
+      <div class="hero-stats reveal-up" style="--d:1.1s">
+        <div class="hstat">
+          <span class="hstat-n" data-count="500">0</span><span class="hstat-n">+</span>
+          <span class="hstat-l">Happy Clients</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-count="98">0</span><span class="hstat-n">%</span>
+          <span class="hstat-l">Satisfaction</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-n">60</span><span class="hstat-n" style="font-size:1rem">min</span>
+          <span class="hstat-l">Avg. Service</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-n">3+</span>
+          <span class="hstat-l">Cities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-hint reveal-up" style="--d:1.3s">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — PROBLEM
+  ============================================================ -->
+  <section id="problem" class="section-dark py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header text-center" data-reveal>
+        <div class="section-label">01 — The Challenge</div>
+        <h2 class="section-title">The Problem<br>with Traditional Car Wash</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="problem-grid" data-stagger>
+        <div class="problem-card" data-item>
+          <div class="pcard-icon"><i class="fas fa-clock"></i></div>
+          <h3>Time Wasted</h3>
+          <p>Busy professionals and families lose hours driving to car wash stations, waiting in queues, and returning — time that could be spent on what matters.</p>
+        </div>
+        <div class="problem-card" data-item>
+          <div class="pcard-icon"><i class="fas fa-route"></i></div>
+          <h3>No Flexibility</h3>
+          <p>Traditional services operate on fixed schedules and locations. Elderly people and those with mobility challenges find it especially difficult to access them.</p>
+        </div>
+        <div class="problem-card" data-item>
+          <div class="pcard-icon"><i class="fas fa-star-half-alt"></i></div>
+          <h3>Quality Gap</h3>
+          <p>Generic car washes use harsh chemicals and rushed processes that damage paint, leave water spots, and deliver inconsistent results.</p>
+        </div>
+        <div class="problem-card" data-item>
+          <div class="pcard-icon"><i class="fas fa-tint-slash"></i></div>
+          <h3>Water Waste</h3>
+          <p>Conventional car wash stations consume up to 300 liters per vehicle — environmentally irresponsible and increasingly costly as water scarcity grows.</p>
+        </div>
+      </div>
+
+      <!-- Full-bleed image separator -->
+      <div class="problem-visual" data-reveal>
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1400&q=80" alt="Problem visual" />
+        <div class="pvis-overlay">
+          <blockquote class="pvis-quote">
+            "Moroccan car owners lose an average of <em>3+ hours</em> per month on car maintenance visits."
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — SOLUTION
+  ============================================================ -->
+  <section id="solution" class="section-light py-section">
+    <div class="container-xl px-section">
+
+      <div class="solution-split" data-reveal>
+        <div class="sol-visual">
+          <div class="sol-img-frame">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80" alt="AquaLux solution" />
+            <div class="sol-badge">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Book in<br>30 sec</span>
+            </div>
+          </div>
+          <div class="sol-floating-card">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Service Confirmed</strong>
+              <small>Technician arriving in 45 min</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-content">
+          <div class="section-label">02 — The Solution</div>
+          <h2 class="section-title dark">Meet<br><em>AquaLux Auto</em></h2>
+          <div class="title-underline gold"></div>
+          <p class="sol-desc">
+            AquaLux Auto is Morocco's first <strong>luxury on-demand mobile car wash</strong> platform. 
+            Through our app, clients book premium cleaning services that come directly to them — 
+            at home, at the office, or anywhere they are.
+          </p>
+          <p class="sol-desc">
+            We combine <strong>professional detailing expertise</strong>, eco-friendly premium products, 
+            and seamless technology to deliver a five-star experience every single time.
+          </p>
+
+          <div class="sol-pillars">
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-mobile-alt"></i></div>
+              <div><strong>App Booking</strong><small>iOS & Android</small></div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+              <div><strong>Eco Products</strong><small>80% less water</small></div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+              <div><strong>Certified Team</strong><small>Background checked</small></div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-credit-card"></i></div>
+              <div><strong>Online Payment</strong><small>CMI secured</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — SERVICES
+  ============================================================ -->
+  <section id="services" class="section-dark py-section overflow-hidden">
+    <div class="container-xl px-section">
+
+      <div class="section-header" data-reveal>
+        <div class="section-label">03 — Our Services</div>
+        <h2 class="section-title">Premium Packages<br><em>Built for Every Need</em></h2>
+        <div class="title-underline"></div>
+      </div>
+
+    </div>
+
+    <!-- Horizontal scroll track -->
+    <div class="services-track-wrapper">
+      <div class="services-track" id="servicesTrack">
+
+        <div class="svc-card" data-item>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&q=80" alt="Basic Wash" />
+            <div class="svc-tier">Essential</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">70 <sup>MAD</sup></span>
+            <h3>Basic Wash</h3>
+            <p>Exterior rinse, foam wash, wheel clean. Perfect weekly maintenance.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Exterior wash</li>
+              <li><i class="fas fa-check"></i> Wheel & tire clean</li>
+              <li><i class="fas fa-check"></i> Window wipe</li>
+              <li><i class="fas fa-check"></i> 20–25 min</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="svc-card" data-item>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Standard Wash" />
+            <div class="svc-tier">Daily Care</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">120 <sup>MAD</sup></span>
+            <h3>Standard Wash</h3>
+            <p>Full interior + exterior. Dashboard polish, vacuum, windows.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Full exterior</li>
+              <li><i class="fas fa-check"></i> Interior vacuum</li>
+              <li><i class="fas fa-check"></i> Dashboard polish</li>
+              <li><i class="fas fa-check"></i> 35–45 min</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="svc-card featured" data-item>
+          <div class="svc-featured-badge">Most Popular</div>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=600&q=80" alt="Premium Wash" />
+            <div class="svc-tier">Luxury</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">250 <sup>MAD</sup></span>
+            <h3>Premium Wash</h3>
+            <p>Ultimate detailing. Wax, leather care, engine bay, deep clean.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Full detail package</li>
+              <li><i class="fas fa-check"></i> Wax protection</li>
+              <li><i class="fas fa-check"></i> Leather treatment</li>
+              <li><i class="fas fa-check"></i> 90–120 min</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="svc-card" data-item>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=600&q=80" alt="Eco Wash" />
+            <div class="svc-tier">Green</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">150 <sup>MAD</sup></span>
+            <h3>ECO Wash</h3>
+            <p>Waterless premium eco products. 80% less water. Full shine.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Waterless process</li>
+              <li><i class="fas fa-check"></i> Eco-certified products</li>
+              <li><i class="fas fa-check"></i> Full exterior</li>
+              <li><i class="fas fa-check"></i> 30–40 min</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="svc-card" data-item>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=600&q=80" alt="Flash Wash" />
+            <div class="svc-tier">Urgent</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">200 <sup>MAD</sup></span>
+            <h3>Flash Wash</h3>
+            <p>Priority express service. Ready for that important meeting in 25 min.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Priority dispatch</li>
+              <li><i class="fas fa-check"></i> Express exterior</li>
+              <li><i class="fas fa-check"></i> Interior wipe</li>
+              <li><i class="fas fa-check"></i> 25–30 min</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="svc-card" data-item>
+          <div class="svc-img-wrap">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="Corporate" />
+            <div class="svc-tier">Business</div>
+          </div>
+          <div class="svc-body">
+            <span class="svc-price">45+ <sup>MAD/car</sup></span>
+            <h3>Corporate Fleet</h3>
+            <p>Custom packages for businesses. Dedicated team & flexible scheduling.</p>
+            <ul class="svc-features">
+              <li><i class="fas fa-check"></i> Fleet pricing</li>
+              <li><i class="fas fa-check"></i> Dedicated team</li>
+              <li><i class="fas fa-check"></i> Monthly contracts</li>
+              <li><i class="fas fa-check"></i> Custom schedule</li>
+            </ul>
+            <a href="#contact" class="svc-btn">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Track navigation -->
+    <div class="track-nav container-xl px-section">
+      <button class="track-btn" id="trackPrev"><i class="fas fa-arrow-left"></i></button>
+      <div class="track-dots" id="trackDots"></div>
+      <button class="track-btn" id="trackNext"><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — HOW IT WORKS
+  ============================================================ -->
+  <section id="how-it-works" class="section-cream py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header text-center" data-reveal>
+        <div class="section-label">04 — The Process</div>
+        <h2 class="section-title dark">Four Steps to<br><em>Immaculate.</em></h2>
+        <div class="title-underline gold"></div>
+      </div>
+
+      <div class="steps-container" data-stagger>
+
+        <div class="step-item" data-item>
+          <div class="step-num">01</div>
+          <div class="step-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
+          <div class="step-connector"></div>
+          <h3>Download & Register</h3>
+          <p>Get the AquaLux Auto app on iOS or Android. Create your account in under a minute.</p>
+        </div>
+
+        <div class="step-item" data-item>
+          <div class="step-num">02</div>
+          <div class="step-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="step-connector"></div>
+          <h3>Choose & Schedule</h3>
+          <p>Select your package, set your location, and pick a time slot that works for you.</p>
+        </div>
+
+        <div class="step-item" data-item>
+          <div class="step-num">03</div>
+          <div class="step-icon-wrap"><i class="fas fa-car-side"></i></div>
+          <div class="step-connector"></div>
+          <h3>We Arrive</h3>
+          <p>Our certified technicians come to you with all equipment. Zero effort on your part.</p>
+        </div>
+
+        <div class="step-item" data-item>
+          <div class="step-num">04</div>
+          <div class="step-icon-wrap"><i class="fas fa-star"></i></div>
+          <div class="step-connector last"></div>
+          <h3>Enjoy & Review</h3>
+          <p>Pay seamlessly via the app and rate your experience. Your car, showroom perfect.</p>
+        </div>
+
+      </div>
+
+      <div class="hiw-image-row" data-reveal>
+        <div class="hiw-img-item">
+          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=500&q=80" alt="App booking" />
+          <span>App Interface</span>
+        </div>
+        <div class="hiw-img-item">
+          <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=500&q=80" alt="Technician" />
+          <span>Certified Technician</span>
+        </div>
+        <div class="hiw-img-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Result" />
+          <span>Perfect Result</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 — MARKET OPPORTUNITY
+  ============================================================ -->
+  <section id="market" class="section-dark py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header" data-reveal>
+        <div class="section-label">05 — Market Opportunity</div>
+        <h2 class="section-title">A Massive<br><em>Untapped Market</em></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="market-layout">
+        <div class="market-stats-col" data-stagger>
+          <div class="mstat-card" data-item>
+            <div class="mstat-icon"><i class="fas fa-car"></i></div>
+            <div class="mstat-val"><span data-count="5.2">0</span>M<span class="mstat-unit">+</span></div>
+            <div class="mstat-label">Registered vehicles in Morocco</div>
+          </div>
+          <div class="mstat-card" data-item>
+            <div class="mstat-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="mstat-val"><span data-count="12">0</span>%</div>
+            <div class="mstat-label">Annual market growth rate</div>
+          </div>
+          <div class="mstat-card" data-item>
+            <div class="mstat-icon"><i class="fas fa-city"></i></div>
+            <div class="mstat-val"><span data-count="3">0</span></div>
+            <div class="mstat-label">Major cities for launch</div>
+          </div>
+          <div class="mstat-card" data-item>
+            <div class="mstat-icon"><i class="fas fa-money-bill-wave"></i></div>
+            <div class="mstat-val">2.4B<span class="mstat-unit"> MAD</span></div>
+            <div class="mstat-label">Total addressable market value</div>
+          </div>
+        </div>
+
+        <div class="market-visual-col" data-reveal>
+          <div class="market-map-wrap">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80" alt="Morocco cities" class="market-bg-img" />
+            <div class="market-overlay">
+              <h3>Target Cities</h3>
+              <div class="city-list">
+                <div class="city-item active">
+                  <i class="fas fa-map-pin"></i>
+                  <div>
+                    <strong>Casablanca</strong>
+                    <small>Phase 1 — Launch City</small>
+                  </div>
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-pin"></i>
+                  <div>
+                    <strong>Rabat</strong>
+                    <small>Phase 2 — Q3 2025</small>
+                  </div>
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-pin"></i>
+                  <div>
+                    <strong>Tanger</strong>
+                    <small>Phase 2 — Q3 2025</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="market-segments">
+            <div class="seg-item">
+              <div class="seg-bar">
+                <div class="seg-fill" style="--w:65%"></div>
+              </div>
+              <div class="seg-info">
+                <span>Busy Professionals & Families</span>
+                <strong>65%</strong>
+              </div>
+            </div>
+            <div class="seg-item">
+              <div class="seg-bar">
+                <div class="seg-fill" style="--w:25%"></div>
+              </div>
+              <div class="seg-info">
+                <span>Elderly / Mobility Challenges</span>
+                <strong>25%</strong>
+              </div>
+            </div>
+            <div class="seg-item">
+              <div class="seg-bar">
+                <div class="seg-fill" style="--w:10%"></div>
+              </div>
+              <div class="seg-info">
+                <span>Corporate Fleets</span>
+                <strong>10%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7 — BUSINESS MODEL (BMC)
+  ============================================================ -->
+  <section id="model" class="section-gold py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header text-center" data-reveal>
+        <div class="section-label light">06 — Business Model</div>
+        <h2 class="section-title dark">How AquaLux<br>Generates Revenue</h2>
+        <div class="title-underline dark"></div>
+      </div>
+
+      <div class="bmc-grid" data-stagger>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h4>Per-Service Revenue</h4>
+          <p>Direct income from each booking — Basic (70 MAD) through Elite Premium (250+ MAD).</p>
+        </div>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>Subscription Plans</h4>
+          <p>Monthly subscription packages for regular clients. Predictable recurring revenue.</p>
+        </div>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-building"></i></div>
+          <h4>Corporate Contracts</h4>
+          <p>B2B fleet service agreements with Renault, Honda, and logistics companies.</p>
+        </div>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-store"></i></div>
+          <h4>Product Upsells</h4>
+          <p>Premium 3M detailing products sold through the app. High-margin accessory revenue.</p>
+        </div>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-percentage"></i></div>
+          <h4>Partner Commission</h4>
+          <p>Revenue sharing with TotalEnergies Maroc, Wafa Assurance, and Maroc Telecom partners.</p>
+        </div>
+
+        <div class="bmc-card" data-item>
+          <div class="bmc-icon"><i class="fas fa-ad"></i></div>
+          <h4>In-App Advertising</h4>
+          <p>Targeted automotive ads via Meta (Facebook & Instagram) partnership integration.</p>
+        </div>
+
+      </div>
+
+      <div class="partners-strip" data-reveal>
+        <div class="ps-label">Strategic Partners</div>
+        <div class="ps-logos">
+          <div class="ps-partner"><i class="fas fa-signal"></i><span>Maroc Telecom</span></div>
+          <div class="ps-partner"><i class="fas fa-car"></i><span>Honda Maroc</span></div>
+          <div class="ps-partner"><i class="fas fa-credit-card"></i><span>CMI</span></div>
+          <div class="ps-partner"><i class="fas fa-flask"></i><span>3M Maroc</span></div>
+          <div class="ps-partner"><i class="fas fa-shield-alt"></i><span>Wafa Assurance</span></div>
+          <div class="ps-partner"><i class="fab fa-facebook-square"></i><span>Meta</span></div>
+          <div class="ps-partner"><i class="fas fa-gas-pump"></i><span>TotalEnergies</span></div>
+          <div class="ps-partner"><i class="fas fa-car-alt"></i><span>Renault Maroc</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 8 — COMPETITIVE ADVANTAGES
+  ============================================================ -->
+  <section id="advantages" class="section-dark py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header" data-reveal>
+        <div class="section-label">07 — Our Edge</div>
+        <h2 class="section-title">Why Clients Choose<br><em>AquaLux.</em></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="advantages-layout">
+        <div class="adv-visual" data-reveal>
+          <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80" alt="Premium detailing" />
+          <div class="adv-score-badge">
+            <div class="score-ring">
+              <svg viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="34" stroke="#1a1a1a" stroke-width="6" fill="none"/>
+                <circle cx="40" cy="40" r="34" stroke="#C9A84C" stroke-width="6" fill="none"
+                        stroke-dasharray="213.6" stroke-dashoffset="21.36"
+                        stroke-linecap="round" transform="rotate(-90 40 40)"/>
+              </svg>
+              <span>98%</span>
+            </div>
+            <small>Client Satisfaction</small>
+          </div>
+        </div>
+
+        <div class="adv-list" data-stagger>
+          <div class="adv-item" data-item>
+            <div class="adv-num">01</div>
+            <div class="adv-content">
+              <h4>On-Demand Convenience</h4>
+              <p>Zero travel required. Book in 30 seconds, we arrive within the hour. No other service in Morocco offers this.</p>
+            </div>
+          </div>
+          <div class="adv-item" data-item>
+            <div class="adv-num">02</div>
+            <div class="adv-content">
+              <h4>Certified Professionals</h4>
+              <p>Every technician undergoes rigorous training and background checks. Wafa Assurance coverage on every job.</p>
+            </div>
+          </div>
+          <div class="adv-item" data-item>
+            <div class="adv-num">03</div>
+            <div class="adv-content">
+              <h4>Premium Product Line</h4>
+              <p>Exclusive use of 3M Maroc certified detailing products. Paint-safe, leather-safe, eco-certified formulas.</p>
+            </div>
+          </div>
+          <div class="adv-item" data-item>
+            <div class="adv-num">04</div>
+            <div class="adv-content">
+              <h4>Transparent Pricing</h4>
+              <p>No hidden fees. Fixed packages with photo documentation before and after. CMI-secured payments.</p>
+            </div>
+          </div>
+          <div class="adv-item" data-item>
+            <div class="adv-num">05</div>
+            <div class="adv-content">
+              <h4>Eco-Conscious</h4>
+              <p>80% less water than traditional wash stations. Biodegradable products. A service you can feel good about.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 9 — VISION / FUTURE
+  ============================================================ -->
+  <section id="vision" class="vision-section py-section">
+    <div class="vision-parallax-bg" id="visionBg">
+      <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=80" alt="Vision" />
+    </div>
+    <div class="vision-overlay"></div>
+
+    <div class="container-xl px-section vision-content">
+
+      <div class="section-header" data-reveal>
+        <div class="section-label">08 — Vision</div>
+        <h2 class="section-title">The Road<br><em>Ahead.</em></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="timeline" data-stagger>
+
+        <div class="tl-item" data-item>
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <span class="tl-date">2025 — Phase 1</span>
+            <h4>Casablanca Launch</h4>
+            <p>App launch, first 50 technicians, 500 clients target. Partnership activations.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-item>
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <span class="tl-date">2025 — Phase 2</span>
+            <h4>National Expansion</h4>
+            <p>Rabat & Tanger rollout. Corporate fleet contracts. Subscription model launch.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-item>
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <span class="tl-date">2026</span>
+            <h4>Morocco-Wide</h4>
+            <p>10 major cities. 500+ certified technicians. 10,000+ active subscribers.</p>
+          </div>
+        </div>
+
+        <div class="tl-item" data-item>
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <span class="tl-date">2027+</span>
+            <h4>Regional Expansion</h4>
+            <p>North Africa expansion — Algeria, Tunisia. AquaLux becomes the #1 mobile detailing brand in MENA.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="vision-cta" data-reveal>
+        <h3>We're building the future of<br><em>automotive care in Africa.</em></h3>
+        <p>Join us on this journey.</p>
+        <a href="#contact" class="btn-gold">
+          <i class="fas fa-handshake"></i>
+          <span>Partner With Us</span>
+          <i class="fas fa-arrow-right btn-arrow"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 10 — TESTIMONIALS
+  ============================================================ -->
+  <section class="section-dark py-section">
+    <div class="container-xl px-section">
+
+      <div class="section-header text-center" data-reveal>
+        <div class="section-label">Client Stories</div>
+        <h2 class="section-title">What Our Clients<br><em>Are Saying</em></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="testimonials-grid" data-stagger>
+
+        <div class="testi-card" data-item>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <blockquote>"Excellent service! They came to my office and cleaned my car perfectly while I was in a meeting. The attention to detail is outstanding."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">YR</div>
+            <div>
+              <strong>Youssef R.</strong>
+              <small>Business Executive, Casablanca</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card featured" data-item>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <blockquote>"I've tried many car wash services, but AquaLux Auto is truly premium. My Mercedes has never looked better! The eco-friendly products are amazing."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">SM</div>
+            <div>
+              <strong>Sara M.</strong>
+              <small>Luxury Car Owner, Rabat</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-item>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <blockquote>"Outstanding mobile service! They come to my home every week and my entire family's cars look brand new. Great value for money."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">AK</div>
+            <div>
+              <strong>Ahmed K.</strong>
+              <small>Family Client, Tanger</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 11 — CONTACT / CTA
+  ============================================================ -->
+  <section id="contact" class="section-light py-section">
+    <div class="container-xl px-section">
+
+      <div class="contact-layout">
+        <div class="contact-info" data-reveal>
+          <div class="section-label">09 — Book Now</div>
+          <h2 class="section-title dark">Your Car<br>Deserves <em>Better.</em></h2>
+          <div class="title-underline gold"></div>
+          <p class="contact-desc">
+            Ready to experience Morocco's most premium mobile car wash? 
+            Fill in the form and our team will confirm your booking within minutes.
+          </p>
+
+          <div class="contact-details">
+            <div class="cd-item">
+              <div class="cd-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <strong>Call / WhatsApp</strong>
+                <a href="tel:+212714494648">+212 714-494-648</a>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:contact@aqualuxauto.ma">contact@aqualuxauto.ma</a>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <strong>Service Zones</strong>
+                <span>Casablanca · Rabat · Tanger</span>
+              </div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon–Sun · 8:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" data-reveal>
+          <form class="contact-form" id="contactForm" novalidate>
+            <h3>Book Your Service</h3>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Youssef" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Benali" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" placeholder="+212 6XX XXX XXX" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label>Service Package</label>
+              <select>
+                <option value="">Select a package…</option>
+                <option>Basic Wash — 70 MAD</option>
+                <option>Standard Wash — 120 MAD</option>
+                <option>Premium Wash — 250 MAD</option>
+                <option>ECO Wash — 150 MAD</option>
+                <option>Flash Wash — 200 MAD</option>
+                <option>Corporate Fleet — Custom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Address / Location</label>
+              <input type="text" placeholder="Street, district, city…" />
+            </div>
+            <div class="form-group">
+              <label>Additional Notes</label>
+              <textarea rows="3" placeholder="Car model, special requests, preferred time…"></textarea>
+            </div>
+            <button type="submit" class="btn-gold form-submit">
+              <i class="fas fa-calendar-check"></i>
+              <span>Confirm Booking</span>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container-xl px-section">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="brand-a">A</span>qua<span class="brand-l">L</span>ux <span class="brand-sub">AUTO</span>
+          </a>
+          <p>Morocco's premier luxury mobile car wash. We bring the showroom to you.</p>
+          <div class="footer-social">
+            <a href="#" class="fsoc"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="fsoc"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="fsoc"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="fsoc"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#solution">Our Solution</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#model">Business Model</a></li>
+            <li><a href="#advantages">Our Edge</a></li>
+            <li><a href="#vision">Vision</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+212714494648">+212 714-494-648</a></li>
+            <li><a href="mailto:contact@aqualuxauto.ma">contact@aqualuxauto.ma</a></li>
+            <li><a href="https://wa.me/212714494648">WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 <span>AquaLux Auto</span>. All rights reserved.</p>
+        <p>Designed with <span class="heart">♥</span> in Morocco</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
